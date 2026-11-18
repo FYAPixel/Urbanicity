@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urbanicity | Peta Digital Wilayah Indonesia & EMSIFA API</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="Media/favicon.ico" type="image/x-icon">
+
+    <!-- Font & Icon -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/97c890c218.js" crossorigin="anonymous"></script>
+
+    <!-- Leaflet CSS & JS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <header class="nav-container">
+        <nav class="glass-nav">
+            <!-- Left Side -->
+            <div class="nav-left">
+                <a href="#Home" class="brand-logo">
+                    <img src="Media/Group 82.png" alt="Logo Urbanicity">
+                    <span class="brand-text">URBANICITY</span>
+                </a>
+            </div>
+
+            <!-- Center Side -->
+            <ul class="nav-center">
+                <li><a href="#Home" class="nav-link active">Beranda</a></li>
+                <li><a href="#About" class="nav-link">Tentang</a></li>
+                <li><a href="#Map" class="nav-link">Peta Wilayah</a></li>
+                <li><a href="#Additional" class="nav-link">Tambahan</a></li>
+            </ul>
+
+            <!-- Right Side -->
+            <div class="nav-right">
+                <a href="#About" class="nav-cta">
+                    <span>Tentang Kami</span>
+                    <i class="fa-solid fa-circle-info"></i>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Bagian Beranda / Hero -->
+        <section class="home-section" id="Home">
+            <video autoplay muted loop playsinline class="hero-video">
+                <source src="Media/hero-bg.mp4" type="video/mp4">
+            </video>
+
+            <!-- Lapisan Pola Titik & Bayangan -->
+            <div class="hero-halftone"></div>
+            <div class="hero-overlay"></div>
+            
+            <div class="home-content">
+                <div class="section-tag">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <span>PETA WILAYAH INDONESIA</span>
+                </div>
+                <h1>Eksplorasi Wilayah Indonesia</h1>
+                <p>Kenali persebaran 38 provinsi di Indonesia secara interaktif. Dilengkapi data ibu kota, populasi, dan kode wilayah langsung dari EMSIFA API.</p>
+                
+                <div class="map-btn-container">
+                    <a href="#Map" class="btn">
+                        <span>Buka Peta Indonesia</span>
+                        <i class="fa-solid fa-arrow-down"></i>
+                    </a>
+                    <a href="#About" class="btn btn-secondary">
+                        <span>Tentang Proyek</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian Tentang Proyek -->
+        <section class="about-section" id="About">
+            <div class="about-container">
+                <div class="section-tag">
+                    <i class="fa-solid fa-compass"></i>
+                    <span>TENTANG PROYEK</span>
+                </div>
+
+                <div class="about-header">
+                    <h2>Mengenal Urbanicity</h2>
+                    <p class="about-lead">
+                        Sebuah platform peta web interaktif untuk mempermudah siapa saja mempelajari letak geografis dan data administratif provinsi di Indonesia.
+                    </p>
+                </div>
+
+                <div class="about-body">
+                    <p>
+                        <strong>Urbanicity</strong> berawal dari proyek belajar siswa di <strong>IDN Boarding School Solo</strong>. Tujuan kami membuat web ini sangat sederhana: menghadirkan peta digital Indonesia yang tampilannya bersih, nyaman dilihat dengan mode gelap, serta ringan saat dibuka di perangkat apa pun.
+                    </p>
+
+                    <p>
+                        Dengan memanfaatkan pustaka <strong>Leaflet.js</strong> dan data terbuka dari <strong>EMSIFA Indonesian Regional API</strong>, website ini memuat 38 provinsi di Indonesia mulai dari Sabang di ujung barat Aceh hingga Merauke di ujung timur Papua. Pengguna bisa melihat titik koordinat, ibu kota daerah, estimasi populasi, serta luas wilayah secara langsung dan real-time.
+                    </p>
+                </div>
+
+                <!-- Kartu Keunggulan Proyek -->
+                <div class="about-grid">
+                    <div class="about-card">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-earth-asia"></i>
+                        </div>
+                        <h3>Fokus Area Nusantara</h3>
+                        <p>Peta dibatasi khusus wilayah Indonesia agar penjelajahan tetap fokus dan tidak tergeser keluar dari kepulauan Nusantara.</p>
+                    </div>
+
+                    <div class="about-card">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-database"></i>
+                        </div>
+                        <h3>Data Terbuka EMSIFA API</h3>
+                        <p>Terhubung langsung dengan API data wilayah Indonesia untuk menampilkan kode provinsi resmi, ibu kota, dan data demografi.</p>
+                    </div>
+
+                    <div class="about-card">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-table-cells-large"></i>
+                        </div>
+                        <h3>Pencarian & Panel Cepat</h3>
+                        <p>Daftar kartu di bawah peta memudahkan pencarian provinsi tertentu dan bisa langsung mengarahkan kamera peta ke titik lokasi.</p>
+                    </div>
+                </div>
+
+                <!-- Catatan Asal Proyek Sekolah -->
+                <div class="about-footer-card">
+                    <div class="footer-card-icon">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div class="footer-card-text">
+                        <p class="about-footer-text">
+                            Urbanicity dikembangkan sebagai sarana praktik pemrograman web dan pengolahan data geospasial oleh siswa di <a href="https://idn.sch.id" target="_blank" rel="noopener noreferrer" class="about-link">IDN Boarding School Solo</a>. Proyek ini akan terus kami kembangkan agar semakin informatif.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian Peta & Panel Data -->
+        <section class="map-section" id="Map">
+            <div class="map-container">
+                <div class="section-tag">
+                    <i class="fa-solid fa-location-crosshairs"></i>
+                    <span>PETA INTERAKTIF INDONESIA</span>
+                </div>
+                <div class="map-header">
+                    <h2>Peta Provinsi Indonesia</h2>
+                    <p>Klik titik putih bercahaya pada peta atau pilih kartu provinsi di bawah ini untuk melihat detail daerah.</p>
+                </div>
+                
+                <!-- Kontainer Peta Leaflet -->
+                <div id="map"></div>
+
+                <!-- Panel Data Wilayah Langsung di Bawah Peta -->
+                <div class="data-panel-wrapper">
+                    <div class="data-panel-header">
+                        <div class="data-panel-title">
+                            <i class="fa-solid fa-database"></i>
+                            <h3>Daftar Provinsi Indonesia</h3>
+                            <span class="region-count-badge" id="regionCount">Memuat...</span>
+                        </div>
+                        <div class="data-panel-search">
+                            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                            <input type="text" id="regionSearch" placeholder="Cari nama provinsi atau ibu kota..." autocomplete="off">
+                        </div>
+                    </div>
+
+                    <!-- Grid Kartu Provinsi Dinamis -->
+                    <div class="regions-grid" id="regionsGrid">
+                        <!-- Diisi otomatis melalui app.js -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian Fakta & Statistik -->
+        <section class="about-section" id="Additional">
+            <div class="about-container">
+                <div class="section-tag">
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span>TAMBAHAN</span>
+                </div>
+
+                <div class="about-header">
+                    <h2>Tentang Leaflet dan EMSIFA</h2>
+                    <p class="about-lead">
+                        Pemberian terima kasih kepada EMSIFA dan Leaflet.
+                    </p>
+                </div>
+                
+                <div class="about-body">
+                    <p>
+                        <strong>Leaflet.js</strong> adalah pustaka JavaScript <em>open-source</em> yang ringan dan andal untuk merender peta interaktif. Diciptakan pertama kali oleh <strong>Volodymyr Agafonkin</strong> dan kini dikembangkan secara kolektif oleh komunitas kontributor global. 
+                        Tertarik ikut berkontribusi? Cek panduannya di <a class="about-link" href="https://github.com/Leaflet/Leaflet/blob/main/CONTRIBUTING.md" target="_blank">GitHub Leaflet</a>, atau dukung langsung pembuatnya melalui inisiatif <a href="https://stand-with-ukraine.pp.ua/" target="_blank" class="about-link">Stand with Ukraine</a>.
+                    </p>
+
+                    <p>
+                        Website ini menggunakan <strong>API Wilayah Indonesia</strong> yang dikembangkan oleh <strong>Muhammad Syifa (EMSIFA)</strong> sebagai sumber data administratif regional yang gratis, cepat, dan siap pakai. Proyek sumber terbuka ini sangat membantu menyediakan data wilayah mulai dari tingkat provinsi, kabupaten/kota, hingga koordinat geografis tanpa perlu repot membangun <em>backend</em> sendiri. Dokumentasi dan repositori lengkapnya bisa kamu cek langsung di <a href="https://github.com/emsifa/api-wilayah-indonesia" target="_blank" class="about-link">GitHub EMSIFA</a>.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <a href="#Home" class="brand-logo">
+                    <img src="Media/Group 82.png" alt="Logo Urbanicity" style="width: 22px; height: auto;">
+                    <span class="brand-text">URBANICITY</span>
+                </a>
+                <p class="footer-tagline">Peta digital interaktif 38 provinsi di Indonesia berbasis EMSIFA API & Leaflet.js.</p>
+            </div>
+            <div class="footer-right">
+                <p>&copy; 2026 Urbanicity. Dibuat oleh FAYPixel <a href="https://idn.sch.id" target="_blank" rel="noopener noreferrer" class="about-link">IDN Boarding School Solo</a>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>  
+</body>
+</html>
